@@ -1,7 +1,7 @@
 package WebService::BaseClientRole;
 use Moo::Role;
 
-our $VERSION = '0.0002'; # VERSION
+our $VERSION = '0.0003'; # VERSION
 
 use HTTP::Request::Common qw(DELETE GET POST PUT);
 use JSON qw(decode_json encode_json);
@@ -120,7 +120,7 @@ WebService::BaseClientRole
 
 =head1 VERSION
 
-version 0.0002
+version 0.0003
 
 =head1 SYNOPSIS
 
@@ -180,9 +180,13 @@ the fun part - writing the web service specific code.
 
 =over
 
-=item L<Net::HTTP::API>
+=item *
 
-=item L<Role::REST::Client>
+L<Net::HTTP::API>
+
+=item *
+
+L<Role::REST::Client>
 
 =back
 

@@ -4,6 +4,7 @@ LICENSE
 MANIFEST
 META.yml
 Makefile.PL
+README
 dist.ini
 lib/WebService/BaseClientRole.pm
 t/00-compile.t
