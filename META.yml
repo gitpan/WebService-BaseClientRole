@@ -29,4 +29,4 @@ requires:
 resources:
   bugtracker: https://github.com/ironcamel/WebService-BaseClientRole/issues
   repository: git://github.com/ironcamel/WebService-BaseClientRole.git
-version: 0.0003
+version: 0.0004

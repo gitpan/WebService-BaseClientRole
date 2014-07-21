@@ -1,7 +1,7 @@
 package WebService::BaseClientRole;
 use Moo::Role;
 
-our $VERSION = '0.0003'; # VERSION
+our $VERSION = '0.0004'; # VERSION
 
 use HTTP::Request::Common qw(DELETE GET POST PUT);
 use JSON qw(decode_json encode_json);
@@ -47,7 +47,7 @@ sub put {
 }
 
 sub delete {
-    my ($self, $path);
+    my ($self, $path) = @_;
     return $self->_req(DELETE $path);
 }
 
@@ -120,7 +120,7 @@ WebService::BaseClientRole
 
 =head1 VERSION
 
-version 0.0003
+version 0.0004
 
 =head1 SYNOPSIS
 
