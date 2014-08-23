@@ -1,5 +1,5 @@
 ---
-abstract: 'A generic base role for creating web service clients'
+abstract: 'A base role for quickly and easily creating web service clients'
 author:
   - 'Naveed Massjouni <naveed@vt.edu>'
 build_requires:
@@ -11,9 +11,9 @@ build_requires:
   strict: 0
   warnings: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: 0
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -29,4 +29,4 @@ requires:
 resources:
   bugtracker: https://github.com/ironcamel/WebService-BaseClientRole/issues
   repository: git://github.com/ironcamel/WebService-BaseClientRole.git
-version: 0.0004
+version: 0.0005

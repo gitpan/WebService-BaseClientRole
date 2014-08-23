@@ -1,7 +1,7 @@
 package WebService::BaseClientRole;
 use Moo::Role;
 
-our $VERSION = '0.0004'; # VERSION
+our $VERSION = '0.0005'; # VERSION
 
 use HTTP::Request::Common qw(DELETE GET POST PUT);
 use JSON qw(decode_json encode_json);
@@ -120,44 +120,40 @@ WebService::BaseClientRole
 
 =head1 VERSION
 
-version 0.0004
+version 0.0005
 
 =head1 SYNOPSIS
 
-    # Easily create a web service client:
-    # FILE: lib/WebService/Foo.pm
+    {
+        package WebService::Foo;
+        use Moo;
+        with 'WebService::BaseClientRole';
 
-    package WebService::Foo;
-    use Moo;
-    with 'WebService::BaseClientRole';
+        has auth_token => ( is => 'ro', required => 1 );
+        has '+base_url' => ( default => 'https://foo.com/v1' );
 
-    has auth_token => ( is => 'ro', required => 1 );
-    has '+base_url' => ( default => 'https://foo.com/v1' );
+        sub BUILD {
+            my ($self) = @_;
+            $self->ua->default_header('X-Auth-Token' => $self->auth_token);
+            # or if the web service uses http basic/digest authentication:
+            # $self->ua->credentials( ... );
+        }
 
-    sub BUILD {
-        my ($self) = @_;
-        $self->ua->default_header('X-Auth-Token' => $self->auth_token);
+        sub get_widgets {
+            my ($self) = @_;
+            return $self->get("/widgets");
+        }
+
+        sub get_widget {
+            my ($self, $id) = @_;
+            return $self->get("/widgets/$id");
+        }
+
+        sub create_widget {
+            my ($self, $widget_data) = @_;
+            return $self->post("/widgets", $widget_data);
+        }
     }
-
-    sub get_widgets {
-        my ($self) = @_;
-        return $self->get("/widgets");
-    }
-
-    sub get_widget {
-        my ($self, $id) = @_;
-        return $self->get("/widgets/$id");
-    }
-
-    sub create_widget {
-        my ($self, $widget_data) = @_;
-        return $self->post("/widgets", $widget_data);
-    }
-
-    1;
-
-    # Example usage
-    # FILE: foo.pl
 
     my $client = WebService::Foo->new(
         auth_token => 'abc',
@@ -169,8 +165,7 @@ version 0.0004
 
 =head1 DESCRIPTION
 
-This module is a generic base role for quickly and easily creating web service
-clients.
+This module is a base role for quickly and easily creating web service clients.
 Every time I created a web service client, I noticed that I kept rewriting the
 same boilerplate code independent of the web service.
 This module does the boring boilerplate for you so you can just focus on

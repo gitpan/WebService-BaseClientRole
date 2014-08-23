@@ -1,10 +1,22 @@
 ==================================================
-Changes from 2004-07-23 00:00:00 +0000 to present.
+Changes from 2004-08-25 00:00:00 +0000 to present.
 ==================================================
 
 -------------------------------------------
-version 0.0004 at 2014-07-21 08:02:05 +0000
+version 0.0005 at 2014-08-23 06:17:42 +0000
 -------------------------------------------
+
+  Change: 48caa5ccc9081eeb804a167f5512649ca4920e9e
+  Author: Naveed Massjouni <naveedm9@gmail.com>
+  Date : 2014-08-23 02:14:46 +0000
+
+    v0.0005 updated docs 
+
+  Change: a1cec95e4b02f5d8f4e8901b2402c18ab141cca5
+  Author: Naveed Massjouni <naveedm9@gmail.com>
+  Date : 2014-07-26 04:28:00 +0000
+
+    updated synopsis 
 
   Change: e304f75b4d38b7586c375ba735d83661c400fd8f
   Author: Naveed Massjouni <naveedm9@gmail.com>
