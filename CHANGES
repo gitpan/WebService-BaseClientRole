@@ -1,9 +1,25 @@
 ==================================================
-Changes from 2004-08-25 00:00:00 +0000 to present.
+Changes from 2004-09-22 00:00:00 +0000 to present.
 ==================================================
 
 -------------------------------------------
-version 0.0005 at 2014-08-23 06:17:42 +0000
+version 0.0006 at 2014-09-20 10:41:53 +0000
+-------------------------------------------
+
+  Change: 94734d7c319108c8f176c9e4456eeabf609b27b6
+  Author: Naveed Massjouni <naveedm9@gmail.com>
+  Date : 2014-09-20 03:39:38 +0000
+
+    v0.0006 made req a public method and added more docs and examples 
+
+  Change: ae2795be20b26663900ccdb2a9bfe5d0a70a438f
+  Author: Naveed Massjouni <naveedm9@gmail.com>
+  Date : 2014-08-23 02:34:49 +0000
+
+    updated abstract 
+
+-------------------------------------------
+version 0.0005 at 2014-08-23 06:14:46 +0000
 -------------------------------------------
 
   Change: 48caa5ccc9081eeb804a167f5512649ca4920e9e
