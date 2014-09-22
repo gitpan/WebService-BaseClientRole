@@ -1,7 +1,7 @@
 package WebService::BaseClientRole;
 use Moo::Role;
 
-our $VERSION = '0.0006'; # VERSION
+our $VERSION = '0.0007'; # VERSION
 
 use HTTP::Request::Common qw(DELETE GET POST PUT);
 use JSON qw(decode_json encode_json);
@@ -122,7 +122,7 @@ WebService::BaseClientRole - A base role for quickly and easily creating web ser
 
 =head1 VERSION
 
-version 0.0006
+version 0.0007
 
 =head1 SYNOPSIS
 
@@ -225,7 +225,7 @@ It is exposed as part of the public interface in case you may want to add
 a method modifier to it.
 Here is a contrived example:
 
-    around _req => sub {
+    around req => sub {
         my ($orig, $self, $req) = @_;
         $req->authorization_basic($self->login, $self->password);
         return $self->$orig($req, @rest);
@@ -241,6 +241,10 @@ Here are some examples of web service clients built with this role.
 You can view their source to help you get started.
 
 =over
+
+=item *
+
+L<Business::BalancedPayments>
 
 =item *
 
