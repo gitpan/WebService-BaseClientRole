@@ -1,5 +1,5 @@
 ---
-abstract: 'A base role for quickly and easily creating web service clients'
+abstract: '[DEPRECATED] A base role for quickly and easily creating web service clients'
 author:
   - 'Naveed Massjouni <naveed@vt.edu>'
 build_requires:
@@ -29,4 +29,4 @@ requires:
 resources:
   bugtracker: https://github.com/ironcamel/WebService-BaseClientRole/issues
   repository: git://github.com/ironcamel/WebService-BaseClientRole.git
-version: 0.0007
+version: 0.0008
